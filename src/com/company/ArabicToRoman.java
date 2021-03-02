@@ -2,8 +2,6 @@ package com.company;
 
 public class ArabicToRoman {
 
-    // Type in a number between 0 and 5999 inclusive. Get the roman version of it. Repeat till 0 is typed.
-
     public String ATR(String arab){
         ArabicToRoman ar = new ArabicToRoman();
         int ara = Integer.parseInt(arab);

@@ -7,6 +7,9 @@ import java.util.regex.Pattern;
 
 public class CompleteARRA {
 
+    // Type in a Roman number between I and MMMMMCMXCIX inclusive. Get the arabic number version of it. OR
+    // Type in a number between 0 and 5999 inclusive. Get the roman version of it.
+
     public static void main(String[] args) throws IOException {
 
         //Testing the RTA method in the RomanToArabic class.

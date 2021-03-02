@@ -2,8 +2,6 @@ package com.company;
 
 public class RomanToArabic {
 
-    // Type in a Roman number between I and MMMMMCMXCIX inclusive. Get the arabic number version of it. Repeat till 0 is typed.
-
     // Commented out lines disturb the normal results of the method. Otherwise serve as a roman number syntax logic.
 
     public static int RTA(String roman) {
