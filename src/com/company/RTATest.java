@@ -2,7 +2,7 @@ package com.company;
 
 public class RTATest {
 
-    ArabicToRoman ar = new ArabicToRoman();
+   /* ArabicToRoman ar = new ArabicToRoman();
     RomanToArabic ra = new RomanToArabic();
 
     int errorCode;
@@ -21,6 +21,6 @@ public class RTATest {
             }
         }
         return errorCode;
-    }
+    }*/
 
 }

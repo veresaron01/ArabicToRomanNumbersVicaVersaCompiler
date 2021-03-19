@@ -4,7 +4,7 @@ public class RomanToArabic {
 
     // Commented out lines disturb the normal results of the method. Otherwise serve as a roman number syntax logic.
 
-    public static int RTA(String roman) {
+    public static int rta(String roman) {
 
         RomanToArabic ra = new RomanToArabic();
         int result = ra.romanToArabicInner(roman);

@@ -2,7 +2,7 @@ package com.company;
 
 public class ArabicToRoman {
 
-    public String ATR(String arab){
+    public String atr(String arab){
         ArabicToRoman ar = new ArabicToRoman();
         int ara = Integer.parseInt(arab);
         String result = ar.arabicToRoman(ara);

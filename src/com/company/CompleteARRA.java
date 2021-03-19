@@ -12,11 +12,6 @@ public class CompleteARRA {
 
     public static void main(String[] args) throws IOException {
 
-        //Testing the RTA method in the RomanToArabic class.
-        /*RTATest t = new RTATest();
-        t.tester();*/
-
-        //For test, comment out from this point.
         ArabicToRoman ar = new ArabicToRoman();
         RomanToArabic ra = new RomanToArabic();
 
@@ -26,22 +21,17 @@ public class CompleteARRA {
         while (true) {
             input = reader.readLine();
 
-            boolean falseRomanChars = Pattern.matches("[^[\\w&&[^MDCLXVI]]]+", input);
-            if (falseRomanChars) {
+            if (input.matches("[^[\\w&&[^MDCLXVI]]]+")) {
                 //boolean falseRomanSyntax = Pattern.matches("[M]{0,5}[CM]?[CD]?[D]?[c]{0,3}[XC]?", input);
                 //if(falseRomanSyntax){
-                    System.out.println(ra.RTA(input));
+                System.out.println(ra.rta(input));
                 //}else{
-                   // System.out.println("False syntax.");
+                // System.out.println("False syntax.");
                 //}
-
-            }
-            boolean falseArabic = Pattern.matches("[\\d]+", input);
-            if (falseArabic) {
-                System.out.println(ar.ATR(input));
+            } else if (input.matches("[\\d]+")) {
+                System.out.println(ar.atr(input));
             }
         }
-        //For test, comment till this point.
     }
 }
 
