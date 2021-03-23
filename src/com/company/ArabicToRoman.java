@@ -1,5 +1,8 @@
 package com.company;
 
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 public class ArabicToRoman {
 
     public String atr(String arab){
@@ -81,6 +84,30 @@ public class ArabicToRoman {
         return sb.toString();
     }
 
+    public String arabicToRoman2(String arabStr){
+        int arab = Integer.parseInt(arabStr);
+        StringBuilder sb = new StringBuilder();
+
+        Map<String, Integer> numbers = new LinkedHashMap<String, Integer>();
+        numbers.put("CM", 900);
+        numbers.put("M", 1000);
+        numbers.put("CD", 400);
+        numbers.put("D", 500);
+        numbers.put("XC", 90);
+        numbers.put("C", 100);
+        numbers.put("XL", 40);
+        numbers.put("L", 50);
+        numbers.put("IX", 9);
+        numbers.put("X", 10);
+        numbers.put("IV", 9);
+        numbers.put("V", 5);
+        numbers.put("I", 1);
+
+
+
+        return sb.toString();
     }
+
+}
 
 
