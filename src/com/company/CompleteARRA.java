@@ -22,9 +22,10 @@ public class CompleteARRA {
 
         String input;
         while (!(input = reader.readLine()).equals("exit")) {
-            if (input.matches("[^[\\w&&[^MDCLXVI]]]+")){
+            if (input.matches("[^[\\w&&[^MDCLXVI]]]+")) {
                 boolean b = false;
-                label: for (String regex : regexes){
+                label:
+                for (String regex : regexes) {
                     if (input.matches(regex)) {
                         System.out.println(ra.romanToArabic(input));
                         b = true;
@@ -35,7 +36,7 @@ public class CompleteARRA {
                     System.out.println("False roman syntax.");
                 }
             } else if (input.matches("[\\d]+")) {
-                System.out.println(ar.atr(input));
+                System.out.println(ar.arabicToRoman(input));//ar.atr
             }
         }
     }

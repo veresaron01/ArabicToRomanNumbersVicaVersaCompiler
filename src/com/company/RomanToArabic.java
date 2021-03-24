@@ -41,12 +41,12 @@ public class RomanToArabic {
     }
 
     public List<String> generateRegexes() {
-        String[] s1 = new String[] {"(M){0,5}", "(CM)?", "(CD)?","(D)?"};
-        String[] s2 = new String[] {"(C){0,3}"};
-        String[] s3 = new String[] {"(XC)?", "(XL)?", "(L)?"};
-        String[] s4 = new String[] {"(X){0,3}"};
-        String[] s5 = new String[] {"(IX)?", "(IV)?", "(V)?"};
-        String[] s6 = new String[] {"(I){0,3}"};
+        String[] s1 = new String[]{"(M){0,5}", "(CM)?", "(CD)?", "(D)?"};
+        String[] s2 = new String[]{"(C){0,3}"};
+        String[] s3 = new String[]{"(XC)?", "(XL)?", "(L)?"};
+        String[] s4 = new String[]{"(X){0,3}"};
+        String[] s5 = new String[]{"(IX)?", "(IV)?", "(V)?"};
+        String[] s6 = new String[]{"(I){0,3}"};
 
         List<String> regexes = new ArrayList();
         List<String> regexesFinish = new ArrayList();
@@ -85,7 +85,7 @@ public class RomanToArabic {
             }
         }
 
-        for  (String part3 : partRegexes3){
+        for (String part3 : partRegexes3) {
             if (!(part3.contains(s3[0]) || (part3.contains(s3[1])))) {
                 sb.append(part3).append(s4[0]);
                 partRegexes4.add(sb.toString());
@@ -97,7 +97,7 @@ public class RomanToArabic {
             }
         }
 
-        for  (String part4 : partRegexes4){
+        for (String part4 : partRegexes4) {
             for (int i = 0; i <= 2; i++) {
                 sb.append(part4).append(s5[i]);
                 partRegexes5.add(sb.toString());
@@ -105,7 +105,7 @@ public class RomanToArabic {
             }
         }
 
-        for (String part5 : partRegexes5){
+        for (String part5 : partRegexes5) {
             if (!(part5.contains(s5[0]) || (part5.contains(s5[1])))) {
                 sb.append(part5).append(s6[0]);
                 regexes.add(sb.toString());
