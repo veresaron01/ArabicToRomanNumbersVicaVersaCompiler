@@ -49,6 +49,7 @@ public class RomanToArabic {
         String[] s6 = new String[] {"(I){0,3}"};
 
         List<String> regexes = new ArrayList();
+        List<String> regexesFinish = new ArrayList();
         List<String> partRegexes1 = new ArrayList();
         List<String> partRegexes2 = new ArrayList();
         List<String> partRegexes3 = new ArrayList();
@@ -115,6 +116,15 @@ public class RomanToArabic {
                 sb.delete(0, sb.length());
             }
         }
-        return regexes;
+
+        for (String reg : regexes) {
+            if (reg.contains("(M){0,5}(M){0,5}")) {
+                String newReg = reg.replace("(M){0,5}(M){0,5}", "(M){0,5}");
+                regexesFinish.add(newReg);
+            } else {
+                regexesFinish.add(reg);
+            }
+        }
+        return regexesFinish;
     }
 }
